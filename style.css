@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*
+Theme Name: Tic et Tec
+Theme URI: https://ticettec.com
+Author: Marzini Farrah
+Author URI: https://ticettec.com
+Description: Le thème du blog Tic et Tec
+Version: 1.0
+*/
+@font-face {
+  font-family: "Wild";
+  src: url("../font/Wild.ttf"); }
+body {
+  background-color: #99C77F; }
+
+#menu {
+  display: flex;
+  justify-content: space-between; }
+  #menu .navbar-toggler {
+    border: none; }
+    #menu .navbar-toggler .navbar-toggle-icon {
+      color: #EB5B47;
+      font-size: 1.2em; }
+  #menu ul li {
+    list-style: none; }
+  #menu .wrsocial {
+    display: flex; }
+    #menu .wrsocial li {
+      font-size: 24px;
+      padding: 2px 8px;
+      transition: 0.3s; }
+      #menu .wrsocial li a {
+        color: white; }
+    #menu .wrsocial li:hover {
+      transform: scale(1.2); }
+      #menu .wrsocial li:hover a {
+        color: #EB5B47; }
+  #menu > div ul {
+    border: 1px solid white; }
+
+.bgpourxs {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

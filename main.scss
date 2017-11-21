@@ -1,0 +1,69 @@
+/*
+Theme Name: Tic et Tec
+Theme URI: https://ticettec.com
+Author: Marzini Farrah
+Author URI: https://ticettec.com
+Description: Le thème du blog Tic et Tec
+Version: 1.0
+*/
+
+// code couleur
+$green : #99C77F;
+$orange : #EB5B47;
+
+
+// fonts
+@font-face {
+  font-family: "Wild";
+  src: url("../font/Wild.ttf");
+}
+
+body {
+  background-color: $green;
+}
+
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  .navbar-toggler {
+    border: none;
+    .navbar-toggle-icon {
+      color: $orange;
+      font-size: 1.2em;
+    }
+  }
+  ul {
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .wrsocial {
+    display: flex;
+    li {
+      a {
+        color: white;
+      }
+      font-size: 24px;
+      padding: 2px 8px;
+      transition: 0.3s;
+    }
+    li:hover {
+      a {
+        color: $orange;
+      }
+      transform: scale(1.2);
+    }
+  }
+
+  > div ul {
+    border: 1px solid white;
+  }
+}
+
+
+.bgpourxs {
+  width: 100%;
+}
