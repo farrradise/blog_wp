@@ -19,9 +19,18 @@
 
   </header>
 
+
+
+  <?php
+  $args = array( 'post_type' => 'post', // je veux uniquement les articles
+  'showposts' => 3
+  );
+  $slides = new WP_Query( $args);
+  ?>
+
   <div id="content-homepage">
-      <?php if(have_posts()) : ?>
-        <?php while(have_posts()) : the_post(); ?>
+    <?php if($slides->have_posts()) : ?>
+        <?php while ($slides->have_posts()) : $slides->the_post(); ?>
         <article id="post-<?php the_ID(); ?>" class="">
 
           <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

@@ -1,5 +1,5 @@
 <footer>
-  Fait par moi
+  Fait avec <i class="fa fa-heart" aria-hidden="true"></i> par <a href="https://farrradise.github.io/portfolio/">Farrah</a>
 </footer>
 
 

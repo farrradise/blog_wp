@@ -116,8 +116,10 @@ a {
   }
 }
 
-header {
+.header-homepage {
   height: 100vh;
+}
+header {
   position: relative;
 
   .titrage {
@@ -162,7 +164,7 @@ header {
 
 
 #content-homepage {
-  width: 100vw;
+  // width: 100vw;
 
   article {
 
@@ -223,11 +225,109 @@ header {
   }
 }
 
+
+#category-section {
+  // position: relative;
+  margin-top : 30px;
+  overflow: hidden;
+  >.article {
+    width: 100%;
+    height: 250px;
+    figure {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      height: 100%;
+      > a {
+        width: 100%;
+        height: 100%;
+
+        img {
+          overflow: hidden;
+          filter: grayscale(80%);
+          -webkit-filter: grayscale(80%);
+          height: 100%;
+          min-width: 100%;
+        }
+      }
+      .hover-figcaption {
+        display: none;
+        height: 100%;
+        padding: 5px;
+        a {
+          p {
+            height: 50%;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 30px;
+            border-bottom: 3px solid white;
+          }
+          span {
+            height: 10%;
+          }
+        }
+      }
+      .visible-figcaption {
+        text-align: center;
+        // text-shadow: 0px 1px 2px white;
+        h3 {
+          text-shadow: 0px 1px 1px $orange;
+        }
+      }
+
+      figcaption {
+        background-color: rgba(10, 10, 10, 0.6);
+        color: white;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        margin: 0;
+      }
+    }
+    figure:hover {
+      overflow: hidden;
+      img {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        transition: 0.3s;
+        transform: scale(1.06);
+      }
+      .hover-figcaption {
+        display: block;
+      }
+      .visible-figcaption {
+        display: none;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: right;
+  color: white;
+  i {
+    padding: 3px;
+    color: $orange;
+  }
+
+  a {
+    text-shadow: 0px 0.3px 0.4px $orange;
+    font-family: 'Wild';
+    font-size: 45px;
+    padding: 10px;
+    padding-right: 40px;
+
+  }
+}
+
 @media (min-width:768px) {
   .header-homepage {
     border-bottom: 3px solid $orange;
     height:65vh;
-    #menu {
+
+  }
+
+  #menu {
       .navbar-collapse {
         .menu-principal {
           > a {
@@ -268,8 +368,6 @@ header {
       }
     }
 
-  }
-
   header .titrage {
 
     h1 {
@@ -304,8 +402,10 @@ header {
   #content-homepage {
     height: 35vh;
     display: flex;
+    flex-flow: row nowrap;
     padding-bottom: 0;
     margin-bottom: 0;
+
     article {
       height: 100%;
       width: 33.33%;
@@ -315,7 +415,6 @@ header {
         img {
           height: 100%;
           min-width: 100%;
-          width: auto;
         }
       }
     }
