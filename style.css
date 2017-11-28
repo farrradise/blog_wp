@@ -171,14 +171,20 @@ header {
         display: none;
         height: 100%;
         padding: 5px; }
-        #category-section > .article figure .hover-figcaption a p {
-          height: 50%;
-          width: 90%;
-          margin: auto;
-          margin-bottom: 30px;
-          border-bottom: 3px solid white; }
-        #category-section > .article figure .hover-figcaption a span {
-          height: 10%; }
+        #category-section > .article figure .hover-figcaption a {
+          color: #EB5B47; }
+          #category-section > .article figure .hover-figcaption a p {
+            color: white;
+            height: 50%;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #EB5B47; }
+          #category-section > .article figure .hover-figcaption a span {
+            font-style: italic;
+            height: 10%;
+            margin-left: 10%;
+            text-align: center; }
       #category-section > .article figure .visible-figcaption {
         text-align: center; }
         #category-section > .article figure .visible-figcaption h3 {
@@ -202,6 +208,17 @@ header {
       #category-section > .article figure:hover .visible-figcaption {
         display: none; }
 
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 10px auto;
+  font-weight: bold;
+  color: white; }
+  .navigation div:hover {
+    transition: 0.3s;
+    color: #EB5B47; }
+
 footer {
   text-align: right;
   color: white; }
@@ -215,6 +232,13 @@ footer {
     padding: 10px;
     padding-right: 40px; }
 
+@media (min-width: 600px) {
+  div#category-section {
+    margin-top: 60px;
+    display: flex;
+    flex-flow: row wrap; }
+    div#category-section > .article {
+      width: 50%; } }
 @media (min-width: 768px) {
   .header-homepage {
     border-bottom: 3px solid #EB5B47;
@@ -280,8 +304,22 @@ footer {
           height: 100%;
           min-width: 100%; } }
 @media (min-width: 980px) {
+  body {
+    min-height: 100vh; }
+    body footer {
+      bottom: 0;
+      position: absolute;
+      width: 100%; }
+
   header .titrage figure img {
     min-width: 400px;
-    right: 40%; } }
+    right: 40%; }
+
+  div#category-section {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 110px; }
+    div#category-section > .article {
+      width: 33.333%; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -255,21 +255,25 @@ header {
         height: 100%;
         padding: 5px;
         a {
+          color: $orange;
           p {
+            color: white;
             height: 50%;
             width: 90%;
             margin: auto;
-            margin-bottom: 30px;
-            border-bottom: 3px solid white;
+            margin-bottom: 10px;
+            border-bottom: 3px solid $orange;
           }
           span {
+            font-style: italic;
             height: 10%;
+            margin-left: 10%;
+            text-align: center;
           }
         }
       }
       .visible-figcaption {
         text-align: center;
-        // text-shadow: 0px 1px 2px white;
         h3 {
           text-shadow: 0px 1px 1px $orange;
         }
@@ -301,6 +305,18 @@ header {
     }
   }
 }
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 10px auto;
+  font-weight: bold;
+  color: white;
+  div:hover {
+    transition: 0.3s;
+    color: $orange;
+  }
+}
 
 footer {
   text-align: right;
@@ -319,6 +335,19 @@ footer {
 
   }
 }
+
+
+@media (min-width:600px) {
+  div#category-section {
+    margin-top: 60px;
+    display: flex;
+    flex-flow: row wrap;
+    >.article {
+      width: 50%;
+    }
+  }
+}
+
 
 @media (min-width:768px) {
   .header-homepage {
@@ -419,6 +448,8 @@ footer {
       }
     }
   }
+
+
 }
 
 
@@ -426,7 +457,15 @@ footer {
 
 
 @media (min-width:980px) {
-
+  body {
+    min-height: 100vh;
+    footer {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+  
   header .titrage {
 
     figure {
@@ -436,4 +475,16 @@ footer {
       }
     }
   }
+
+
+  div#category-section {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 110px;
+    >.article {
+      width: 33.333%;
+    }
+  }
+
+
 }

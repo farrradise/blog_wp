@@ -37,7 +37,7 @@
 
           </article>
         <?php endwhile; else: ?>
-          <p>La page demandé n'est pas accessible</p>
+          <p style="margin:50px auto; padding:10px; text-align : center; color: white;">Aucun article n'est encore répertorié dans la catégorie suivante</p>
         <?php endif; ?>
     </div>
     <div class="navigation">
