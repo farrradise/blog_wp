@@ -328,6 +328,10 @@ header {
   margin: 75px 0;
   padding: 40px 10px;
   // margin-bottom: 40px;
+  h3, .postmetadata {
+    max-width: 400px;
+    margin: auto;
+  }
   h3 {
     color:$orange;
     text-align: center;
@@ -355,14 +359,91 @@ header {
   }
   .contenu {
     margin-bottom: 30px;
-    text-align: center;
+    text-align: justify;
+    max-width: 600px;
+    margin: auto;
     border: 1px solid red;
+    // width: 100%;
+    >div {
+      min-width: 100%;
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      // border: 1px solid green;
+      img {
+        margin: auto;
+        width: 100%;
+        max-width: 400px;
+
+      }
+    }
+  }
+  #comments {
+    display: none;
+  }
+  .commentlist {
+    background-color: $green;
+    padding: 10px;
+    color:white;
+    max-width: 400px;
+    margin: auto;
+    .fn {
+      color: $orange;
+      font-weight: bold;
+    }
+    .comment-body {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid white;
+    }
+  }
+
+  form {
+    // border: 1px solid red;
+    >p {
+      display: flex;
+      // max-width:
+      margin: auto;
+      max-width: 400px;
+      flex-flow: column;
+      textarea, input {
+        margin: auto;
+        max-width: 90%;
+      }
+      .submit {
+        margin-top: 10px;
+        background-color: $orange;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        padding: 8px 15px;
+        transition: 0.2s;
+      }
+      .submit:hover {
+        transform: scale(1.04);
+      }
+    }
+    label, span:last-of-type {
+      color: $orange;
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .comment-notes {
+      font-size: 12px;
+      // border: 1px solid red;
+      text-align: center;
+      // span:last-of-type {
+        // color: $orange;
+      // }
+    }
   }
  }
 
 .sidebar-article {
   margin: 0;
-  background-color: white;
+  display: none;
+  // background-color: white;
 }
 
 footer {

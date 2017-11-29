@@ -32,6 +32,7 @@
     <div class="contenu">
       <?php the_content(); ?>
     </div>
+
     <?php comments_template(); ?>
   </article>
 <?php endwhile; else: ?>
