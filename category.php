@@ -19,7 +19,7 @@
                   <div class="postmetadata">
                     Par <?php the_author() ?> le <?php the_time('d/m/Y') ?>
                     <p>
-                        <?php the_category(' | ') ?>
+                        <?php the_category(' | '); ?>
                     </p>
                   </div>
 

@@ -318,14 +318,10 @@ header {
     color: $orange;
   }
 }
-//
-// #menu {
-//   border: 1px solid red;
-// }
 
 .article-content {
   background-color: white;
-  margin: 75px 0;
+  margin: 75px 0 0 0;
   padding: 40px 10px;
   // margin-bottom: 40px;
   h3, .postmetadata {
@@ -358,18 +354,14 @@ header {
     }
   }
   .contenu {
-    margin-bottom: 30px;
     text-align: justify;
     max-width: 600px;
-    margin: auto;
-    border: 1px solid red;
-    // width: 100%;
+    margin: auto auto 30px auto;
     >div {
       min-width: 100%;
       display: flex;
       flex-flow: column;
       text-align: center;
-      // border: 1px solid green;
       img {
         margin: auto;
         width: 100%;
@@ -379,27 +371,38 @@ header {
     }
   }
   #comments {
-    display: none;
+  display: none;
   }
   .commentlist {
-    background-color: $green;
+    background-color:rgba(235, 91, 71,0.8);//rgba(153, 199, 127,0.8);//rgba(235, 91, 71,0.9);
     padding: 10px;
     color:white;
     max-width: 400px;
     margin: auto;
     .fn {
-      color: $orange;
+      // color: $green;
       font-weight: bold;
+      font-style: normal;
     }
     .comment-body {
       padding-bottom: 10px;
       margin-bottom: 10px;
       border-bottom: 3px solid white;
+      >p {
+        // color: $orange;
+      }
+      .comment-reply-link {
+        font-size: 13px;
+        font-style: italic;
+      }
+    }
+    .comment-meta {
+      text-align: right;
+      font-size: 14px;
     }
   }
 
   form {
-    // border: 1px solid red;
     >p {
       display: flex;
       // max-width:
@@ -431,7 +434,6 @@ header {
     }
     .comment-notes {
       font-size: 12px;
-      // border: 1px solid red;
       text-align: center;
       // span:last-of-type {
         // color: $orange;
@@ -440,11 +442,31 @@ header {
   }
  }
 
+.more_articles {
+  padding: 40px 10px;
+
+  #category-section {
+    >h3 {
+      width: 100%;
+      margin: auto;
+      color:white;
+      text-align: center;
+      padding-bottom: 16px;
+    }
+
+    .article {
+      max-width: 400px;
+      margin: auto;
+      max-height: 240px;
+    }
+  }
+}
+
 .sidebar-article {
   margin: 0;
   display: none;
-  // background-color: white;
 }
+
 
 footer {
   text-align: right;
@@ -470,10 +492,26 @@ footer {
     margin-top: 60px;
     display: flex;
     flex-flow: row wrap;
-    // border: 2px solid $orange;
     >.article {
       border: 3px solid $orange;
       width: 50%;
+    }
+  }
+
+  .more_articles {
+    div#category-section {
+    padding: 0px;
+    margin: 0 auto;
+
+    >.article {
+      border: none;
+      width: 50%;
+      // width: 33.3333%;
+
+    }
+    >.article:nth-of-type(3) {
+      display: none;
+    }
     }
   }
 }
@@ -579,6 +617,22 @@ footer {
     }
   }
 
+
+  .more_articles {
+    div#category-section {
+    padding: 0px;
+    margin: 0 auto;
+
+      >.article {
+      border: none;
+      width: 33.3333%;
+
+      }
+      >.article:nth-of-type(3) {
+      display: block;
+      }
+    }
+  }
 
 }
 
