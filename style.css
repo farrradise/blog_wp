@@ -120,9 +120,10 @@ header {
     width: 100%;
     height: auto; }
   #content-homepage article figure figcaption {
-    background-color: rgba(250, 250, 250, 0.7);
+    background-color: rgba(50, 50, 50, 0.7);
     position: absolute;
     bottom: 0px;
+    color: white;
     padding: 0px 5px;
     height: 100px;
     width: 100%; }
@@ -219,6 +220,35 @@ header {
     transition: 0.3s;
     color: #EB5B47; }
 
+.article-content {
+  background-color: white;
+  margin: 75px 0;
+  padding: 40px 10px; }
+  .article-content h3 {
+    color: #EB5B47;
+    text-align: center;
+    border-bottom: 3px solid #EB5B47;
+    padding-bottom: 16px; }
+  .article-content .postmetadata p {
+    display: flex;
+    justify-content: space-between; }
+    .article-content .postmetadata p span {
+      font-size: 12px;
+      font-style: italic; }
+  .article-content .postmetadata p:last-child span {
+    margin-left: auto;
+    text-align: right;
+    color: #EB5B47;
+    font-weight: bold; }
+  .article-content .contenu {
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid red; }
+
+.sidebar-article {
+  margin: 0;
+  background-color: white; }
+
 footer {
   text-align: right;
   color: white; }
@@ -238,6 +268,7 @@ footer {
     display: flex;
     flex-flow: row wrap; }
     div#category-section > .article {
+      border: 3px solid #EB5B47;
       width: 50%; } }
 @media (min-width: 768px) {
   .header-homepage {
@@ -304,13 +335,6 @@ footer {
           height: 100%;
           min-width: 100%; } }
 @media (min-width: 980px) {
-  body {
-    min-height: 100vh; }
-    body footer {
-      bottom: 0;
-      position: absolute;
-      width: 100%; }
-
   header .titrage figure img {
     min-width: 400px;
     right: 40%; }
