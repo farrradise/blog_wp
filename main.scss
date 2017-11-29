@@ -238,6 +238,7 @@ header {
 
 
 #category-section {
+  // border: 1px solid red;
   // position: relative;
   margin-top : 30px;
   overflow: hidden;
@@ -325,7 +326,8 @@ header {
   color: $orange;
   div:hover {
     transition: 0.3s;
-    color: $green;
+    // color: $green;
+    transform: scale(1.08);
   }
 }
 
@@ -505,9 +507,11 @@ footer {
     margin-top: 60px;
     display: flex;
     flex-flow: row wrap;
+    overflow: visible;
     >.article {
-      border: 3px solid $orange;
+      border: 2px solid white;//$orange;
       width: 50%;
+      // box-shadow: 0px px 2px darkgrey;
     }
   }
 
@@ -669,15 +673,27 @@ footer {
     max-width: 1200px;
     margin: auto;
     margin-top: 110px;
+    >h3 {
+      width: 100%;
+      font-size: 20px;
+      color:$orange;
+      text-align: center;
+      padding: 20px;
+    }
     >.article {
       width: 33.333%;
+    }
+    >.main-section:hover {
+      transform: scale(1.07);
+      z-index: 40;
+      transition: 0.3s;
     }
   }
 
   .article-content {
-    // border: 1px solid red;
     width: 85%;
   }
+
 
   .sidebar-article {
     margin: 0;

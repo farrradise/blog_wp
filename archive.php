@@ -5,9 +5,9 @@
   </header>
 
   <div id="category-section">
-
     <?php if(have_posts()) : ?>
       <?php while(have_posts()) : the_post(); ?>
+        <h3>Retrouvez tous les articles de la période sélectionnée :</h3>
           <article id="post-<?php the_ID(); ?>" class="article main-section">
 
               <figure>

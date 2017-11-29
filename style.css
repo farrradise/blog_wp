@@ -226,7 +226,7 @@ header {
   color: #EB5B47; }
   .navigation div:hover {
     transition: 0.3s;
-    color: #99C77F; }
+    transform: scale(1.08); }
 
 .article-content {
   background-color: white;
@@ -349,9 +349,10 @@ footer {
   div#category-section {
     margin-top: 60px;
     display: flex;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    overflow: visible; }
     div#category-section > .article {
-      border: 3px solid #EB5B47;
+      border: 2px solid white;
       width: 50%; }
 
   .more_articles div#category-section {
@@ -448,8 +449,18 @@ footer {
     max-width: 1200px;
     margin: auto;
     margin-top: 110px; }
+    div#category-section > h3 {
+      width: 100%;
+      font-size: 20px;
+      color: #EB5B47;
+      text-align: center;
+      padding: 20px; }
     div#category-section > .article {
       width: 33.333%; }
+    div#category-section > .main-section:hover {
+      transform: scale(1.07);
+      z-index: 40;
+      transition: 0.3s; }
 
   .article-content {
     width: 85%; }
