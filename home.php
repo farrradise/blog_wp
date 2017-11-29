@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<body>
+<body class="homepage-color">
   <header class="header-homepage">
     <?php get_template_part('entete');?>
     <div class="titrage">

@@ -18,8 +18,18 @@ $orange : #EB5B47;
   src: url("./font/Wild.ttf");
 }
 
-body {
+.no-found {
+  margin:50px auto;
+  padding:10px;
+  text-align : center;
+  color: $orange;
+}
+
+.homepage-color {
   background-color: $green;
+  footer {
+    color: white;
+  }
 }
 
 ul li {
@@ -312,10 +322,10 @@ header {
   max-width: 300px;
   margin: 10px auto;
   font-weight: bold;
-  color: white;
+  color: $orange;
   div:hover {
     transition: 0.3s;
-    color: $orange;
+    color: $green;
   }
 }
 
@@ -323,9 +333,8 @@ header {
   background-color: white;
   margin: 75px 0 0 0;
   padding: 40px 10px;
-  // margin-bottom: 40px;
   h3, .postmetadata {
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
   }
   h3 {
@@ -333,7 +342,6 @@ header {
     text-align: center;
     border-bottom: 3px solid $orange;
     padding-bottom: 16px;
-    // margin-bottom: 16px;
   }
   .postmetadata {
     p {
@@ -377,7 +385,7 @@ header {
     background-color:rgba(235, 91, 71,0.8);//rgba(153, 199, 127,0.8);//rgba(235, 91, 71,0.9);
     padding: 10px;
     color:white;
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
     .fn {
       // color: $green;
@@ -407,7 +415,7 @@ header {
       display: flex;
       // max-width:
       margin: auto;
-      max-width: 400px;
+      max-width: 600px;
       flex-flow: column;
       textarea, input {
         margin: auto;
@@ -435,15 +443,15 @@ header {
     .comment-notes {
       font-size: 12px;
       text-align: center;
-      // span:last-of-type {
-        // color: $orange;
-      // }
     }
   }
  }
 
 .more_articles {
   padding: 40px 10px;
+  position: relative;
+  // z-index: 400!important;
+  // border: 1px solid red;
 
   #category-section {
     >h3 {
@@ -465,19 +473,24 @@ header {
 .sidebar-article {
   margin: 0;
   display: none;
+
 }
 
 
 footer {
+  z-index: 50;
+  position: relative;
   text-align: right;
-  color: white;
+  // background-color: $green;
+  color: $green;
   i {
     padding: 3px;
     color: $orange;
   }
 
   a {
-    text-shadow: 0px 0.3px 0.4px $orange;
+    color: $orange;
+    // text-shadow: 0px 0.3px 0.4px $orange;
     font-family: 'Wild';
     font-size: 45px;
     padding: 10px;
@@ -503,15 +516,14 @@ footer {
     padding: 0px;
     margin: 0 auto;
 
-    >.article {
+      >.article {
       border: none;
       width: 50%;
-      // width: 33.3333%;
+      }
 
-    }
-    >.article:nth-of-type(3) {
+      >.article:nth-of-type(3) {
       display: none;
-    }
+      }
     }
   }
 }
@@ -588,7 +600,6 @@ footer {
       margin-left: auto;
       z-index: -1;
       img {
-        // margin-right: 0;
         bottom : 35vh;
         position: absolute;
         max-width: 300px;
@@ -619,6 +630,9 @@ footer {
 
 
   .more_articles {
+    position: relative;
+    z-index: 50;
+    background-color: $green;
     div#category-section {
     padding: 0px;
     margin: 0 auto;
@@ -633,7 +647,6 @@ footer {
       }
     }
   }
-
 }
 
 
@@ -661,5 +674,77 @@ footer {
     }
   }
 
+  .article-content {
+    // border: 1px solid red;
+    width: 85%;
+  }
+
+  .sidebar-article {
+    margin: 0;
+    display: block;
+    background-color: white;
+    min-height: 90vh;
+    width: 280px;
+    position: fixed;
+    // z-index: 10;
+    top: 0;
+    right: 0;
+    padding: 100px 20px 10px 20px;
+    // z-index: 3;
+    .widget {
+      h2 {
+        padding: 5px;
+        text-align: center;
+        background-color: $orange;
+        font-size: 20px;
+        color:white;
+      }
+      ul {
+        padding-left: 5px;
+        li {
+          margin: auto 10px;
+          list-style-type: circle;
+          font-size: 14px;
+          >a {
+          }
+          >a:hover {
+            transition: 0.3s;
+            color: $orange;
+          }
+        }
+      }
+    }
+    #calendar_wrap {
+      >* {
+        margin: auto;
+        padding: 10px;
+      }
+      thead {
+        color:$orange;
+      }
+      tbody {
+        a {
+          color : white;
+          padding: 1px;
+          background-color: $orange;
+        }
+        a:hover {
+          background-color: white;
+          font-weight: bold;
+          color: $orange;
+          padding: 0;
+          border: 1px solid $orange;
+        }
+      }
+      caption {
+        color: $orange;
+        padding: 0;
+        margin: 0 0 10px 0;
+        // display: none;
+      }
+    }
+    >* {
+    }
+  }
 
 }
